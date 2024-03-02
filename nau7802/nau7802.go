@@ -326,7 +326,7 @@ func (s *nau7802) resetCycle(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	err = s.setSampleRate(ctx, NAU7802_SPS_10); //Set samples per second to 10
+	err = s.setSampleRate(ctx, NAU7802_SPS_80); //Set samples per second to 80
 	if err != nil {
 		return err
 	}
@@ -574,7 +574,7 @@ func (s *nau7802) getAverage(ctx context.Context, samplesToTake int) (int, error
 			return 0, errors.New("timed out reading data from nau7802")
 		}
 		// Sleep in between each reading to ensure the chip is ready to read again
-		time.Sleep(90 * time.Millisecond)
+		time.Sleep(20 * time.Millisecond)
 	}
 
 	return total/samplesToTake, nil
