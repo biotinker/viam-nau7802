@@ -1,0 +1,13 @@
+{
+  "module_id": "biotinker:viam-nau7802",
+  "visibility": "public",
+  "url": "https://github.com/biotinker/viam-nau7802",
+  "description": "A driver for nau7802 load cell amplifiers",
+  "models": [
+    {
+      "api": "rdk:component:sensor",
+      "model": "biotinker:sensor:nau7802"
+    }
+  ],
+  "entrypoint": "viam-nau7802"
+}
