@@ -249,7 +249,7 @@ type nau7802 struct {
 
 // Readings returns a list containing two items (current temperature and humidity).
 func (s *nau7802) Readings(ctx context.Context, extra map[string]interface{}) (map[string]interface{}, error) {
-	mass, raw, err := s.getWeight(ctx, false, s.samples)
+	mass, raw, err := s.getWeight(ctx, true, s.samples)
 	if err != nil {
 		return nil, err
 	}
