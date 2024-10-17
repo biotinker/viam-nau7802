@@ -30,7 +30,7 @@ Add the module to your robot from the Viam registry. The component may then be a
 
 The attributes `gain` and `samples` are optional.
 
-If `gain` is not set, it will default to 64. Valid `gain` values are 1, 2, 4, 8, 16, 32, 64, and 128. Gain should be set higher for lower capacity load cells.
+If `gain` is not set, it will default to 64. Valid `gain` values are 1, 2, 4, 8, 16, 32, 64, and 128. Gain should be set higher for lower capacity load cells. Any change to `gain` requires re-calibration.
 
 If `samples` is not set, it will default to 8. This value is the number of readings which will be taken in quick succession and averaged together to give the reading. Valid `samples` values is any positive integer.
 
